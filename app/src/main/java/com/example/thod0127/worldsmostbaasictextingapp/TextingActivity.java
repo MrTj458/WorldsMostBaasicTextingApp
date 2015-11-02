@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
+ * @version 1.0 11/2/15
  * @author Trevor Hodsdon
  * @author Cody Henrichsen - Extra class assignment.
  */
