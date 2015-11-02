@@ -10,6 +10,9 @@ import android.widget.Toast;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+/**
+ * @author Cody Henrichsen - Extra class assignment.
+ */
 public class TextingActivity extends AppCompatActivity
 {
     private TextView sentText;
