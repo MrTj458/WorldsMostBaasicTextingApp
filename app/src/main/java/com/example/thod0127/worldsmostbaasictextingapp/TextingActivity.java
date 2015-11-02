@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
+ * @author Trevor Hodsdon
  * @author Cody Henrichsen - Extra class assignment.
  */
 public class TextingActivity extends AppCompatActivity
