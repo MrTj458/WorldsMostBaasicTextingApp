@@ -33,19 +33,9 @@
         android:layout_width="128dp"
         android:layout_height="32dp"
         android:text="Sent:"
-        android:id="@+id/textView11"
+        android:id="@+id/sent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-
-    <TextView
-        android:layout_width="128dp"
-        android:layout_height="32dp"
-        android:text="Recieved:"
-        android:id="@+id/textView12"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -59,22 +49,39 @@
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:id="@+id/sentText"
+        android:layout_below="@+id/sent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Your latest sent message will appear here."/>
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView"
-        android:layout_below="@+id/textView12"
+        android:text="Trevor"
+        android:id="@+id/number1"
+        android:layout_below="@+id/sentText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView11"
-        android:layout_alignLeft="@+id/textView11"
-        android:layout_alignStart="@+id/textView11"
+        android:text="Emily"
+        android:id="@+id/number2"
+        android:layout_alignBottom="@+id/number1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send a nice message"
+        android:id="@+id/niceStuff"
+        android:layout_alignBottom="@+id/number2"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
