@@ -84,4 +84,15 @@
         android:layout_alignBottom="@+id/number2"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Made by: cody"
+        android:id="@+id/textView"
+        android:layout_above="@+id/numberBox"
+        android:layout_toRightOf="@+id/number1"
+        android:layout_toEndOf="@+id/number1"
+        android:layout_marginBottom="64dp"/>
+
 </RelativeLayout>
