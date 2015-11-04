@@ -13,6 +13,8 @@ import java.util.ArrayList;
 /**
  * @version 1.0 11/2/15
  * @author Trevor Hodsdon
+ * @author Josiah Elmer
+ * @author Denon Barton
  * @author Cody Henrichsen - Extra class assignment.
  */
 public class TextingActivity extends AppCompatActivity
