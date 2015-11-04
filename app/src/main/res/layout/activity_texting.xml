@@ -45,7 +45,7 @@
         android:layout_centerHorizontal="true"
         android:hint="Number to message"
         android:phoneNumber="false"
-        android:inputType="number"/>
+        android:inputType="phone"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,37 +61,86 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trevor"
-        android:id="@+id/number1"
-        android:layout_below="@+id/sentText"
+        android:text="Number 2"
+        android:id="@+id/number2"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Emily"
-        android:id="@+id/number2"
-        android:layout_alignBottom="@+id/number1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:text="Number1"
+        android:id="@+id/number1"
+        android:layout_above="@+id/number2"
+        android:layout_alignRight="@+id/number2"
+        android:layout_alignEnd="@+id/number2"
+        android:layout_marginBottom="35dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send a nice message"
         android:id="@+id/niceStuff"
-        android:layout_alignBottom="@+id/number2"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignBottom="@+id/sentText"
+        android:layout_alignLeft="@+id/numberBox"
+        android:layout_alignStart="@+id/numberBox"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Made by: Trevor, cody"
+        android:text="Made by: Trevor, Denon"
         android:id="@+id/textView"
         android:layout_above="@+id/numberBox"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/contact1"
+        android:layout_alignBottom="@+id/number1"
+        android:layout_toRightOf="@+id/number2"
+        android:hint="Contact 1"
+        android:layout_alignRight="@+id/niceStuff"
+        android:layout_alignEnd="@+id/niceStuff"
+        android:inputType="phone"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:text="Save"
+        android:id="@+id/saveNumber1"
+        android:layout_alignBaseline="@+id/contact1"
+        android:layout_alignBottom="@+id/contact1"
+        android:layout_toRightOf="@+id/contact1"
+        android:layout_toEndOf="@+id/contact1"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/contact2"
+        android:layout_alignBottom="@+id/number2"
+        android:layout_toRightOf="@+id/number2"
+        android:layout_alignRight="@+id/numberBox"
+        android:layout_alignEnd="@+id/numberBox"
+        android:hint="Contact 2"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:text="Save"
+        android:id="@+id/saveNumber2"
+        android:layout_alignTop="@+id/number2"
+        android:layout_alignLeft="@+id/saveNumber1"
+        android:layout_alignStart="@+id/saveNumber1"
+        android:textSize="12dp"/>
 
 </RelativeLayout>

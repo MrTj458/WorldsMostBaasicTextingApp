@@ -24,9 +24,13 @@ public class TextingActivity extends AppCompatActivity
     private Button number1;
     private Button number2;
     private Button randomMessage;
-    private String trevorNumber;
-    private String emilyNumber;
+    private String savedNumber1;
+    private String savedNumber2;
+    private Button saveNumber1Button;
+    private Button saveNumber2Button;
     private ArrayList<String> randomText;
+    private EditText contact1;
+    private EditText contact2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -41,9 +45,13 @@ public class TextingActivity extends AppCompatActivity
         number2 = (Button) findViewById(R.id.number2);
         randomMessage = (Button) findViewById(R.id.niceStuff);
         sentText = (TextView) findViewById(R.id.sentText);
-        trevorNumber = "8016188606";
-        emilyNumber = "8012050112";
+        savedNumber1 = "";
+        savedNumber2 = "";
         randomText = new ArrayList<>();
+        saveNumber1Button = (Button) findViewById(R.id.saveNumber1);
+        saveNumber2Button = (Button) findViewById(R.id.saveNumber2);
+        contact1 = (EditText) findViewById(R.id.contact1);
+        contact2 = (EditText) findViewById(R.id.contact2);
 
         setupList();
         setupListeners();
@@ -77,7 +85,7 @@ public class TextingActivity extends AppCompatActivity
             @Override
             public void onClick(View currentView)
             {
-                smsNumberField.setText(trevorNumber);
+                smsNumberField.setText(savedNumber1);
             }
         });
 
@@ -86,7 +94,7 @@ public class TextingActivity extends AppCompatActivity
             @Override
             public void onClick(View currentView)
             {
-                smsNumberField.setText(emilyNumber);
+                smsNumberField.setText(savedNumber2);
             }
         });
 
@@ -100,6 +108,22 @@ public class TextingActivity extends AppCompatActivity
                 smsMessageField.setText(message);
             }
         });
+        saveNumber1Button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View currentView)
+            {
+                savedNumber1 = contact1.getText().toString();
+            }
+        });
+        saveNumber2Button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View currentView)
+            {
+                savedNumber2 = contact2.getText().toString();
+            }
+        });
     }
 
     private void sendSMS(String messageAddress, String messageContent)
@@ -107,6 +131,7 @@ public class TextingActivity extends AppCompatActivity
         SmsManager mySMSManager = SmsManager.getDefault();
         mySMSManager.sendTextMessage(messageAddress, null, messageContent, null, null);
         sentText.setText(messageContent);
+        smsMessageField.setText("");
     }
 
     private void setupList()
