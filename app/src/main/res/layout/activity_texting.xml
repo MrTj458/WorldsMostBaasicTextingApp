@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Made by: Trevor, Denon, Josiah"
+        android:text="Made by: Trevor, Denon, Josiah, Rory"
         android:id="@+id/textView"
         android:layout_above="@+id/numberBox"
         android:layout_alignParentLeft="true"
