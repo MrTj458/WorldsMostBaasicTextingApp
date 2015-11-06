@@ -34,6 +34,10 @@ public class TextingActivity extends AppCompatActivity
     private EditText contact1;
     private EditText contact2;
 
+    /**
+     * gives values to the objects when the program starts
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -59,6 +63,9 @@ public class TextingActivity extends AppCompatActivity
         setupListeners();
     }
 
+    /**
+     * Sets up the listeners for all of the buttons on screen.
+     */
     private void setupListeners()
     {
         sendSMSButton.setOnClickListener(new View.OnClickListener()
@@ -128,6 +135,11 @@ public class TextingActivity extends AppCompatActivity
         });
     }
 
+    /**
+     * Sends the inputted message to the inputted number through sms.
+     * @param messageAddress
+     * @param messageContent
+     */
     private void sendSMS(String messageAddress, String messageContent)
     {
         SmsManager mySMSManager = SmsManager.getDefault();
@@ -136,6 +148,9 @@ public class TextingActivity extends AppCompatActivity
         smsMessageField.setText("");
     }
 
+    /**
+     * adds values to the randomText array list.
+     */
     private void setupList()
     {
         randomText.add("Hello!");
