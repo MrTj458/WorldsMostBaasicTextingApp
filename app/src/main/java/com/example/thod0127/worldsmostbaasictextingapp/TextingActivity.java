@@ -15,6 +15,7 @@ import java.util.ArrayList;
  * @author Trevor Hodsdon
  * @author Josiah Elmer
  * @author Denon Barton
+ * @author Rory Baker
  * @author Cody Henrichsen - Extra class assignment.
  */
 public class TextingActivity extends AppCompatActivity
