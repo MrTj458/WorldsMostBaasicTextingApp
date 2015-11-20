@@ -48,7 +48,6 @@ public class TextingActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texting);
-
         sendSMSButton = (Button) findViewById(R.id.sendButton);
         smsMessageField = (EditText) findViewById(R.id.messageBox);
         smsNumberField = (EditText) findViewById(R.id.numberBox);
