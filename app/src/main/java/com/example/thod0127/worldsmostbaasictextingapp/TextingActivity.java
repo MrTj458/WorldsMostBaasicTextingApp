@@ -1,11 +1,13 @@
 package com.example.thod0127.worldsmostbaasictextingapp;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.widget.EditText;
 import android.widget.Button;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -34,6 +36,8 @@ public class TextingActivity extends AppCompatActivity
     private ArrayList<String> randomText;
     private EditText contact1;
     private EditText contact2;
+    private Button changeColorButton;
+    private RelativeLayout background;
 
     /**
      * gives values to the objects when the program starts
@@ -59,7 +63,10 @@ public class TextingActivity extends AppCompatActivity
         saveNumber2Button = (Button) findViewById(R.id.saveNumber2);
         contact1 = (EditText) findViewById(R.id.contact1);
         contact2 = (EditText) findViewById(R.id.contact2);
+        changeColorButton = (Button) findViewById(R.id.changeColorButton);
+        background = (RelativeLayout) findViewById(R.id.background);
 
+        changeBackgroundColor();
         setupList();
         setupListeners();
     }
@@ -69,7 +76,7 @@ public class TextingActivity extends AppCompatActivity
      */
     private void setupListeners()
     {
-        sendSMSButton.setOnClickListener(new View.OnClickListener()
+        sendSMSButton.setOnClickListener(new View.OnClickListener() //Sets up the listener for the send button.
         {
             @Override
             public void onClick(View currentView)
@@ -90,7 +97,7 @@ public class TextingActivity extends AppCompatActivity
             }
         });
 
-        number1.setOnClickListener(new View.OnClickListener()
+        number1.setOnClickListener(new View.OnClickListener() //Sets up the listener for the 1st contact.
         {
             @Override
             public void onClick(View currentView)
@@ -99,7 +106,7 @@ public class TextingActivity extends AppCompatActivity
             }
         });
 
-        number2.setOnClickListener(new View.OnClickListener()
+        number2.setOnClickListener(new View.OnClickListener() //Sets up the listener for the second contact.
         {
             @Override
             public void onClick(View currentView)
@@ -108,7 +115,7 @@ public class TextingActivity extends AppCompatActivity
             }
         });
 
-        randomMessage.setOnClickListener(new View.OnClickListener()
+        randomMessage.setOnClickListener(new View.OnClickListener() //Sets up the random message button.
         {
             @Override
             public void onClick(View currentView)
@@ -118,7 +125,8 @@ public class TextingActivity extends AppCompatActivity
                 smsMessageField.setText(message);
             }
         });
-        saveNumber1Button.setOnClickListener(new View.OnClickListener()
+
+        saveNumber1Button.setOnClickListener(new View.OnClickListener() //Sets up the save button for number 1.
         {
             @Override
             public void onClick(View currentView)
@@ -126,12 +134,22 @@ public class TextingActivity extends AppCompatActivity
                 savedNumber1 = contact1.getText().toString();
             }
         });
-        saveNumber2Button.setOnClickListener(new View.OnClickListener()
+
+        saveNumber2Button.setOnClickListener(new View.OnClickListener() //Sets up the save button for number 2.
         {
             @Override
             public void onClick(View currentView)
             {
                 savedNumber2 = contact2.getText().toString();
+            }
+        });
+
+        changeColorButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View currentView)
+            {
+                changeBackgroundColor();
             }
         });
     }
@@ -159,5 +177,18 @@ public class TextingActivity extends AppCompatActivity
         randomText.add("Have a great Summer / Winter / Spring / Fall!");
         randomText.add("Merry Holidays!");
         randomText.add("C u l8r!");
+    }
+
+    /**
+     * Changes the background color of the app to a random color.
+     */
+    private void changeBackgroundColor()
+    {
+        int red, blue, green;
+        red = (int) (Math.random() * 256);
+        blue = (int) (Math.random() * 256);
+        green = (int) (Math.random() * 256);
+
+        background.setBackgroundColor(Color.rgb(red, green, blue));
     }
 }
